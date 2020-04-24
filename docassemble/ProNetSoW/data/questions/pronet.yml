@@ -1,0 +1,67 @@
+---
+metadata:
+  title: |
+    ProNET Statement of Work
+  short title: |
+    ProNET SoW
+  description: |
+    This interview creates a ProNET SoW
+  authors:
+    - name: Chuck Pearson
+      organization: Black Box
+  revision_date: 2020-01-14
+  documentation: "https://docassemble.org/docs/initial.html#metadata"
+---
+features:
+  progress bar: True
+---
+question: "Client's Name:"
+fields:
+  - no label: client
+---
+question: "Client Info:"
+fields:
+  - Street Address: client_street_address
+  - City: city
+  - State: st
+  - Zip: zip
+---
+question: "Date to be presented:"
+fields:
+  - Estimated Date: date
+    datatype: date
+---
+question: "AM Info:"
+fields:
+  - Name: am
+  - email: email
+  - phone: phone
+---
+question: "Who is the Engineer?"
+fields:
+  - Name: se
+---
+question: "How long is this SoW valid?"
+fields:
+  - Days: Valid_Term
+    choices:
+    - 30
+    - 60
+    - 90
+---
+question: How many hours are you proposing? Sell Total?
+fields:
+  - Quantity of Hours: number_hours
+  - Total Sell: sell_total
+    datatype: currency
+---
+mandatory: true
+question: |
+  Here is your ProNET SoW.
+attachment:
+  name: ProNet Scope of Work
+  filename: ProNet_Sow
+  docx template file: pronet_template1.docx
+  valid formats:
+    - pdf
+    - docx
